@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><title>Bookings</title><style>body{background:#111;color:#eee;padding:20px;}table{width:100%;border-collapse:collapse;}td,th{border:1px solid #555;padding:8px;}</style></head>
+<body>
+<h1>Dyltech Bookings</h1>
+<table id="table"><tr><th>Name</th><th>Phone</th><th>Device</th><th>Date</th></tr></table>
+<script>
+fetch('/api/bookings').then(r=>r.json()).then(data => {
+  let html = '';
+  data.forEach(b => {
+    html += `<tr><td>${b.first_name} \( {b.surname}</td><td> \){b.phone}</td><td>\( {b.device}</td><td> \){b.timestamp}</td></tr>`;
+  });
+  document.getElementById('table').innerHTML += html;
+});
+</script>
+</body></html>
