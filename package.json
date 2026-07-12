@@ -4,5 +4,12 @@
   "main": "Server.js",
   "scripts": {
     "start": "node Server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "body-parser": "^1.20.2",
+    "sqlite3": "^5.1.7",
+    "whatsapp-web.js": "^1.26.0",
+    "qrcode-terminal": "^0.12.0"
   }
 }
